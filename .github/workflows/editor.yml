@@ -1,0 +1,19 @@
+name: dose
+
+on:
+  push:
+
+jobs:
+  March:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        terminal: ["sausage", "project", "feather", "festival", "outward"]
+        lecture: ["mainstream", "network", "interdependence", "domestic"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java --enable-native-access=ALL-UNNAMED -jar Le.jar
